@@ -1,0 +1,14 @@
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\bin\Debug\net8.0\APComputerScience-CreateTask-Assignment.exe
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\bin\Debug\net8.0\APComputerScience-CreateTask-Assignment.deps.json
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\bin\Debug\net8.0\APComputerScience-CreateTask-Assignment.runtimeconfig.json
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\bin\Debug\net8.0\APComputerScience-CreateTask-Assignment.dll
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\bin\Debug\net8.0\APComputerScience-CreateTask-Assignment.pdb
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Debug\net8.0\APComputerScience-CreateTask-Assignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Debug\net8.0\APComputerScience-CreateTask-Assignment.AssemblyInfoInputs.cache
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Debug\net8.0\APComputerScience-CreateTask-Assignment.AssemblyInfo.cs
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Debug\net8.0\APComputerScience-CreateTask-Assignment.csproj.CoreCompileInputs.cache
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Debug\net8.0\APComputerScience-CreateTask-Assignment.dll
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Debug\net8.0\refint\APComputerScience-CreateTask-Assignment.dll
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Debug\net8.0\APComputerScience-CreateTask-Assignment.pdb
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Debug\net8.0\APComputerScience-CreateTask-Assignment.genruntimeconfig.cache
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Debug\net8.0\ref\APComputerScience-CreateTask-Assignment.dll
