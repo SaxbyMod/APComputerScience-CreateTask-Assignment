@@ -1,8 +1,8 @@
 ﻿namespace Bookdisplayer
 {
-    public class Program
+    public static class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             Console.BackgroundColor = ConsoleColor.DarkMagenta;
             Console.ForegroundColor = ConsoleColor.White;
@@ -27,14 +27,47 @@
                 Console.WriteLine(foldername.Replace(BookDir + "\\", ""));
             }
         }
+        // Stack Overflow - javadch
+        public static string Capitalize(this string word)
+        {
+            return word.Substring(0, 1).ToUpper() + word.Substring(1).ToLower();
+        }
+        // Provided by GPT
+        public static string CapitalizeWithSpaces(this string sentence)
+        {
+            string[] words = sentence.Split(' ');
+            for (int i = 0; i < words.Length; i++)
+            {
+                words[i] = words[i].Capitalize();
+            }
+
+            return string.Join(" ", words);
+        }
         public static void PageReader()
         {
             string BookDir = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), $"Books"));
             Console.Write("What Book would you like to read from the above options?: ");
             string Book = Console.ReadLine();
+            Book = CapitalizeWithSpaces(Book);
+            Console.WriteLine(Book);
             if (Directory.Exists(Path.Combine(BookDir, Book)))
             {
                 Console.WriteLine($"Book Selected {Book}");
+            } else
+            {
+                int A = 0;
+                int B = 0;
+                while (A==B)
+                {
+                    Console.Write("That was not a option, Try Again!: ");
+                    Book = Console.ReadLine();
+                    Book = CapitalizeWithSpaces(Book);
+                    if (Directory.Exists(Path.Combine(BookDir, Book)))
+                    {
+                        Console.WriteLine($"Book Selected {Book}");
+                        A++;
+                    }
+                }
             }
             List<string> Pages = new List<string>();
             for (int i = 0; ; i++)
@@ -69,6 +102,7 @@
                             {
                                 if (currentPage >= 0 && currentPage <= Pages.Count)
                                 {
+                                    Console.Clear();
                                     Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                                     Console.WriteLine($"Book: {Book}\nPage: {string.Join(", ", Pages.ElementAt(currentPage))}");
                                     Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
@@ -129,6 +163,7 @@
             else if (Option == "X")
             {
                 BookFinishedForNow = true;
+                Main();
             }
             else
             {
@@ -166,6 +201,7 @@
                     {
                         BookFinishedForNow = true;
                         y++;
+                        Main();
                     }
                 }
             }
