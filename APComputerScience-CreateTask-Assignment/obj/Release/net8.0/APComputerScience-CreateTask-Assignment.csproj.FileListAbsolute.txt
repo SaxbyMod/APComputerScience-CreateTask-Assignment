@@ -12,3 +12,4 @@ C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerSc
 C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Release\net8.0\APComputerScience-CreateTask-Assignment.pdb
 C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Release\net8.0\APComputerScience-CreateTask-Assignment.genruntimeconfig.cache
 C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Release\net8.0\ref\APComputerScience-CreateTask-Assignment.dll
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\APComputerScience-CreateTask-Assignment\obj\Release\net8.0\APComputerScience-CreateTask-Assignment.sourcelink.json

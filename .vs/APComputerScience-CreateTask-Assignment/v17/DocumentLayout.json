@@ -5,9 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5AB77EFE-8F20-4A15-9B39-F22F9DA9D670}|APComputerScience-CreateTask-Assignment\\APComputerScience-CreateTask-Assignment.csproj|c:\\users\\thinc\\source\\repos\\apcomputerscience-createtask-assignment\\apcomputerscience-createtask-assignment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5AB77EFE-8F20-4A15-9B39-F22F9DA9D670}|APComputerScience-CreateTask-Assignment\\APComputerScience-CreateTask-Assignment.csproj|solutionrelative:apcomputerscience-createtask-assignment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Thinc\\AppData\\Local\\SourceServer\\309c8dfc5030d3cf23be8900b9dbafc30cc3a161a4f8a96003ad952921cae739\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\List.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "List.cs",
-              "DocumentMoniker": "C:\\Users\\Thinc\\AppData\\Local\\SourceServer\\309c8dfc5030d3cf23be8900b9dbafc30cc3a161a4f8a96003ad952921cae739\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\List.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\309c8dfc5030d3cf23be8900b9dbafc30cc3a161a4f8a96003ad952921cae739\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\List.cs",
-              "ToolTip": "C:\\Users\\Thinc\\AppData\\Local\\SourceServer\\309c8dfc5030d3cf23be8900b9dbafc30cc3a161a4f8a96003ad952921cae739\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\List.cs",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\309c8dfc5030d3cf23be8900b9dbafc30cc3a161a4f8a96003ad952921cae739\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\List.cs",
-              "ViewState": "AQIAAIIAAAAAAAAAAAAiwJUAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T17:59:24.771Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,7 +24,7 @@
               "RelativeDocumentMoniker": "APComputerScience-CreateTask-Assignment\\Program.cs",
               "ToolTip": "C:\\Users\\Thinc\\source\\repos\\APComputerScience-CreateTask-Assignment\\APComputerScience-CreateTask-Assignment\\Program.cs",
               "RelativeToolTip": "APComputerScience-CreateTask-Assignment\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAoAAAA",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAAoAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T12:38:05.332Z",
               "EditorCaption": ""

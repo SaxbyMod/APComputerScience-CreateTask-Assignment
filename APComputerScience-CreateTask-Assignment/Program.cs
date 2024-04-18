@@ -80,7 +80,7 @@
                                     Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                                     Console.Write("What Navigation would you like to do from the above options?: ");
                                     string Option = Console.ReadLine();
-                                    Functions(Option, ref currentPage, ref BookFinishedForNow);
+                                    Functions(Option, ref currentPage, ref BookFinishedForNow, Pages.Count);
                                     Save(ref saveLines, ref Book, ref saveFilePath, ref currentPage);
                                 }
                                 else
@@ -102,15 +102,29 @@
                 }
             }
         }
-        public static void Functions(string Option, ref int currentPage, ref bool BookFinishedForNow)
+        public static void Functions(string Option, ref int currentPage, ref bool BookFinishedForNow, int totalPages)
         {
             if (Option == ">")
             {
-                currentPage++;
+                if (currentPage < totalPages - 1)
+                {
+                    currentPage++;
+                }
+                else
+                {
+                    Console.WriteLine("Error: You are already on the last page.");
+                }
             }
             else if (Option == "<")
             {
-                currentPage--;
+                if (currentPage > 0)
+                {
+                    currentPage--;
+                }
+                else
+                {
+                    Console.WriteLine("Error: You are already on the first page.");
+                }
             }
             else if (Option == "X")
             {
@@ -126,15 +140,32 @@
                     Option = Console.ReadLine();
                     if (Option == ">")
                     {
-                        currentPage++;
+                        if (currentPage < totalPages - 1)
+                        {
+                            currentPage++;
+                            y++;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error: You are already on the last page.");
+                        }
                     }
                     else if (Option == "<")
                     {
-                        currentPage--;
+                        if (currentPage > 0)
+                        {
+                            currentPage--;
+                            y++;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error: You are already on the first page.");
+                        }
                     }
                     else if (Option == "X")
                     {
                         BookFinishedForNow = true;
+                        y++;
                     }
                 }
             }
