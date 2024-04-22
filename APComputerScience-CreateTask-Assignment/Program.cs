@@ -21,10 +21,11 @@
         {
             List<string> Books = new List<string>();
             string BookDir = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), $"Books"));
-            foreach (string foldername in Directory.GetDirectories(BookDir))
+            foreach (string folderPath in Directory.GetDirectories(BookDir))
             {
-                Books.Add(foldername);
-                Console.WriteLine(foldername.Replace(BookDir + "\\", ""));
+                string folderName = new DirectoryInfo(folderPath).Name;
+                Books.Add(folderName);
+                Console.WriteLine(folderName);
             }
         }
         // Stack Overflow - javadch
@@ -50,58 +51,58 @@
             string Book = Console.ReadLine();
             Book = CapitalizeWithSpaces(Book);
             Console.WriteLine(Book);
-            if (Directory.Exists(Path.Combine(BookDir, Book)))
+
+            if (!Directory.Exists(Path.Combine(BookDir, Book)))
             {
-                Console.WriteLine($"Book Selected {Book}");
-            } else
-            {
-                int A = 0;
-                int B = 0;
-                while (A==B)
-                {
-                    Console.Write("That was not a option, Try Again!: ");
-                    Book = Console.ReadLine();
-                    Book = CapitalizeWithSpaces(Book);
-                    if (Directory.Exists(Path.Combine(BookDir, Book)))
-                    {
-                        Console.WriteLine($"Book Selected {Book}");
-                        A++;
-                    }
-                }
+                Console.Write("The Options are above the prior line Which one of those?: ");
+                Book = Console.ReadLine();
+                Book = CapitalizeWithSpaces(Book);
+                Console.WriteLine(Book);
             }
+
             List<string> Pages = new List<string>();
-            for (int i = 0; ; i++)
+            int maxPages = 1000; // Adjust this number based on your expected maximum number of pages
+
+            for (int i = 0; i < maxPages; i++)
             {
-                if (File.Exists(Path.Combine(BookDir, Book, $"{i}.txt")))
+                string filePath = Path.Combine(BookDir, Book, $"{i}.txt");
+                if (File.Exists(filePath))
                 {
                     Pages.Add(i.ToString());
                 }
-                else if (!File.Exists(Path.Combine(BookDir, Book, $"{i}.txt")))
-                {
-                    break;
-                }
                 else
                 {
-                    Console.WriteLine("No Pages Available or hit cap");
-                    break;
+                    break; // Exit the loop if no more pages are found
                 }
             }
+
+            if (Pages.Count == 0)
+            {
+                Console.WriteLine("Error: No pages found for the selected book.");
+                return;
+            }
+
             string saveFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Save.txt");
             bool BookFinishedForNow = false;
+
             while (BookFinishedForNow == false)
             {
                 if (File.Exists(saveFilePath))
                 {
                     string[] saveLines = File.ReadAllLines(saveFilePath);
+                    bool foundCurrentPage = false;
+
                     foreach (string line in saveLines)
                     {
                         if (line.StartsWith($"{Book}-Current-Page: "))
                         {
+                            foundCurrentPage = true;
                             string currentPageStr = line.Split(':')[1].Trim();
                             if (int.TryParse(currentPageStr, out int currentPage))
                             {
                                 if (currentPage >= 0 && currentPage <= Pages.Count)
                                 {
+                                    // Display current page and handle navigation
                                     Console.Clear();
                                     Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                                     Console.WriteLine($"Book: {Book}\nPage: {string.Join(", ", Pages.ElementAt(currentPage))}");
@@ -115,7 +116,7 @@
                                     Console.Write("What Navigation would you like to do from the above options?: ");
                                     string Option = Console.ReadLine();
                                     Functions(Option, ref currentPage, ref BookFinishedForNow, Pages.Count);
-                                    Save(ref saveLines, ref Book, ref saveFilePath, ref currentPage);
+                                    Save(ref saveLines, ref Book, ref saveFilePath, ref currentPage, ref BookDir);
                                 }
                                 else
                                 {
@@ -127,6 +128,15 @@
                                 Console.WriteLine("Error: Invalid page number format in Save.txt!");
                             }
                             break;
+                        }
+                    }
+
+                    if (!foundCurrentPage)
+                    {
+                        // Add line to save file for the current book
+                        using (StreamWriter sw = File.AppendText(saveFilePath))
+                        {
+                            sw.WriteLine($"{Book}-Current-Page: 0");
                         }
                     }
                 }
@@ -206,22 +216,34 @@
                 }
             }
         }
-        public static void Save(ref string[] saveLines, ref string Book, ref string saveFilePath, ref int currentPage)
+        public static void Save(ref string[] saveLines, ref string Book, ref string SaveFilePath, ref int currentPage, ref string BookDir)
         {
-            // Provided by GPT and modified from it to work better.
-            string[] updatedSaveLines = new string[saveLines.Length];
+            if (!Directory.Exists(BookDir))
+            {
+                Directory.CreateDirectory(BookDir);
+            }
+
+            bool bookFound = false;
+
             for (int i = 0; i < saveLines.Length; i++)
             {
                 if (saveLines[i].StartsWith($"{Book}-Current-Page: "))
                 {
-                    updatedSaveLines[i] = $"{Book}-Current-Page: {currentPage}";
-                }
-                else
-                {
-                    updatedSaveLines[i] = saveLines[i];
+                    saveLines[i] = $"{Book}-Current-Page: {currentPage}";
+                    bookFound = true;
+                    break;
                 }
             }
-            File.WriteAllLines(saveFilePath, updatedSaveLines);
+
+            if (!bookFound)
+            {
+                using (StreamWriter sw = File.AppendText(SaveFilePath))
+                {
+                    sw.WriteLine($"{Book}-Current-Page: {currentPage}");
+                }
+            }
+
+            File.WriteAllLines(SaveFilePath, saveLines);
         }
     }
 }
