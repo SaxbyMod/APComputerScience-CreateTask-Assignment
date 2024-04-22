@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APComputerScience-CreateTask-Assignment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+febb5c7b3b84e4a5db8a48c563a3ac96446b54ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bfdc76127da7ccf1a532d15176bde30ba6be05a")]
 [assembly: System.Reflection.AssemblyProductAttribute("APComputerScience-CreateTask-Assignment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APComputerScience-CreateTask-Assignment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

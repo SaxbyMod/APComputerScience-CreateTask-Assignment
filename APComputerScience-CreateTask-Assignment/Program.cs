@@ -9,7 +9,7 @@
             string BookDir = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), $"Books"));
             // Window Size Adjustment by: Node Defender - Stack Overflow
             Console.WindowHeight = 43;
-            Console.WindowWidth = 75;
+            Console.WindowWidth = 85;
             Console.WriteLine("Test 1");
             Console.WriteLine("Max height: " + Console.LargestWindowHeight.ToString());
             Console.WriteLine("Max width: " + Console.LargestWindowWidth.ToString());
@@ -51,7 +51,6 @@
             string Book = Console.ReadLine();
             Book = CapitalizeWithSpaces(Book);
             Console.WriteLine(Book);
-
             if (!Directory.Exists(Path.Combine(BookDir, Book)))
             {
                 Console.Write("The Options are above the prior line Which one of those?: ");
@@ -59,10 +58,8 @@
                 Book = CapitalizeWithSpaces(Book);
                 Console.WriteLine(Book);
             }
-
             List<string> Pages = new List<string>();
-            int maxPages = 1000; // Adjust this number based on your expected maximum number of pages
-
+            int maxPages = 1000;
             for (int i = 0; i < maxPages; i++)
             {
                 string filePath = Path.Combine(BookDir, Book, $"{i}.txt");
@@ -72,19 +69,16 @@
                 }
                 else
                 {
-                    break; // Exit the loop if no more pages are found
+                    break;
                 }
             }
-
             if (Pages.Count == 0)
             {
                 Console.WriteLine("Error: No pages found for the selected book.");
                 return;
             }
-
             string saveFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Save.txt");
             bool BookFinishedForNow = false;
-
             while (BookFinishedForNow == false)
             {
                 if (File.Exists(saveFilePath))
@@ -102,17 +96,16 @@
                             {
                                 if (currentPage >= 0 && currentPage <= Pages.Count)
                                 {
-                                    // Display current page and handle navigation
                                     Console.Clear();
-                                    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                                    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                                     Console.WriteLine($"Book: {Book}\nPage: {string.Join(", ", Pages.ElementAt(currentPage))}");
-                                    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                                    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                                     string filePath = Path.Combine(Directory.GetCurrentDirectory(), BookDir, Book, $"{currentPageStr}.txt");
                                     string fileContent = File.ReadAllText(filePath);
                                     Console.WriteLine(fileContent);
-                                    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-                                    Console.WriteLine("<                                   X                                   >");
-                                    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                                    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+                                    Console.WriteLine(" <                                        X                                        > ");
+                                    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                                     Console.Write("What Navigation would you like to do from the above options?: ");
                                     string Option = Console.ReadLine();
                                     Functions(Option, ref currentPage, ref BookFinishedForNow, Pages.Count);
@@ -133,7 +126,6 @@
 
                     if (!foundCurrentPage)
                     {
-                        // Add line to save file for the current book
                         using (StreamWriter sw = File.AppendText(saveFilePath))
                         {
                             sw.WriteLine($"{Book}-Current-Page: 0");
@@ -222,9 +214,7 @@
             {
                 Directory.CreateDirectory(BookDir);
             }
-
             bool bookFound = false;
-
             for (int i = 0; i < saveLines.Length; i++)
             {
                 if (saveLines[i].StartsWith($"{Book}-Current-Page: "))
@@ -234,7 +224,6 @@
                     break;
                 }
             }
-
             if (!bookFound)
             {
                 using (StreamWriter sw = File.AppendText(SaveFilePath))
@@ -242,7 +231,6 @@
                     sw.WriteLine($"{Book}-Current-Page: {currentPage}");
                 }
             }
-
             File.WriteAllLines(SaveFilePath, saveLines);
         }
     }
