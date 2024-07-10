@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thinc\\source\\repos\\APComputerScience-CreateTask-Assignment\\APComputerScience-CreateTask-Assignment\\Book Displayer.csproj",
+      "projectUniqueName": "C:\\Users\\Thinc\\source\\repos\\APComputerScience-CreateTask-Assignment\\BookDisplayer\\Book Displayer.csproj",
       "projectName": "Book Displayer",
-      "projectPath": "C:\\Users\\Thinc\\source\\repos\\APComputerScience-CreateTask-Assignment\\APComputerScience-CreateTask-Assignment\\Book Displayer.csproj",
+      "projectPath": "C:\\Users\\Thinc\\source\\repos\\APComputerScience-CreateTask-Assignment\\BookDisplayer\\Book Displayer.csproj",
       "packagesPath": "C:\\Users\\Thinc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thinc\\source\\repos\\APComputerScience-CreateTask-Assignment\\APComputerScience-CreateTask-Assignment\\obj\\",
+      "outputPath": "C:\\Users\\Thinc\\source\\repos\\APComputerScience-CreateTask-Assignment\\BookDisplayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
