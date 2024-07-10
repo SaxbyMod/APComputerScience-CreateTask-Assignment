@@ -19,7 +19,7 @@
 
 1. Open The `Books` Folder.
 2. Make a new folder with any name you want, Just cannot be the same as one already in the folder.
-3. Starting at `0.txt` make new text files for each page in the the book the maximum amount of lines per page is `35` with a max line length of `86`.
+3. Starting at `0.txt` make new text files for each page in the the book the maximum amount of lines per page is `35` with a max line length of `86`. If your story has chapters add `Chapter: [REPLACEMEWITHYOURNAME]` on the first line of each page in that chapter meaning you'll have `34` lines instead.
 
 ## To-Do:
 
