@@ -1,0 +1,15 @@
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\bin\Release\net8.0\Book Displayer.exe
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\bin\Release\net8.0\Book Displayer.deps.json
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\bin\Release\net8.0\Book Displayer.runtimeconfig.json
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\bin\Release\net8.0\Book Displayer.dll
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\bin\Release\net8.0\Book Displayer.pdb
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Displayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Displayer.AssemblyInfoInputs.cache
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Displayer.AssemblyInfo.cs
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Displayer.csproj.CoreCompileInputs.cache
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Displayer.sourcelink.json
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Displayer.dll
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\refint\Book Displayer.dll
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Displayer.pdb
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Displayer.genruntimeconfig.cache
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\ref\Book Displayer.dll
