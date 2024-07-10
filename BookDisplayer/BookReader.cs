@@ -103,13 +103,21 @@
                             {
                                 if (currentPage >= 0 && currentPage <= Pages.Count)
                                 {
+                                    string filePath = Path.Combine(Directory.GetCurrentDirectory(), BookDir, Book, $"{currentPageStr}.txt");
+
+                                    var fileLines = File.ReadAllLines(filePath).ToList();
+
                                     Console.Clear();
                                     Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                                     Console.WriteLine($"Book: {Book}\nPage: {string.Join(", ", Pages.ElementAt(currentPage))}");
+                                    if (fileLines.Count > 0 && fileLines[0].StartsWith("Chapter: "))
+                                    {
+                                        string chapterContent = fileLines[0].Substring("Chapter: ".Length);
+                                        Console.WriteLine($"Chapter: {chapterContent}");
+                                        fileLines.RemoveAt(0);
+                                    }
                                     Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-                                    string filePath = Path.Combine(Directory.GetCurrentDirectory(), BookDir, Book, $"{currentPageStr}.txt");
-                                    string fileContent = File.ReadAllText(filePath);
-                                    Console.WriteLine(fileContent);
+                                    Console.WriteLine(string.Join("\n", fileLines));
                                     Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                                     Console.WriteLine(" <                                        X                                        > ");
                                     Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
@@ -138,7 +146,7 @@
                             sw.WriteLine($"{Book}-Current-Page: 0");
                         }
                     }
-                } 
+                }
                 else
                 {
                     Console.WriteLine("Error: Save file not found!");

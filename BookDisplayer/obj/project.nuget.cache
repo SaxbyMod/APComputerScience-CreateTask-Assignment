@@ -1,8 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "K9aSxH3Ks/6GqPd8WgKckTYk1X4jNOPn1LlAsvDkQJkCV8WGSilOOxsbg/RO3PIkh2Ej+0sXsZB9CrFCojS9Ng==",
+  "dgSpecHash": "O6OP74pToQmU0Qu+lXE/5PHbV6RjbfuJ5cxItx5DWf9t6Bq/p4ucvH68bnLV3NrHFue0AZnVZwr8V1GvORxQfg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Thinc\\source\\repos\\APComputerScience-CreateTask-Assignment\\BookDisplayer\\Book Displayer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Thinc\\.nuget\\packages\\bezier\\0.9.3.5\\bezier.0.9.3.5.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\font\\0.3.0.3\\font.0.3.0.3.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\system.globalization\\4.0.11\\system.globalization.4.0.11.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\system.io\\4.1.0\\system.io.4.1.0.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\system.numerics.vectors\\4.1.1\\system.numerics.vectors.4.1.1.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\system.reflection\\4.1.0\\system.reflection.4.1.0.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\system.reflection.primitives\\4.0.1\\system.reflection.primitives.4.0.1.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\system.resources.resourcemanager\\4.0.1\\system.resources.resourcemanager.4.0.1.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\system.runtime.extensions\\4.1.0\\system.runtime.extensions.4.1.0.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\system.text.encoding\\4.0.11\\system.text.encoding.4.0.11.nupkg.sha512",
+    "C:\\Users\\Thinc\\.nuget\\packages\\system.threading.tasks\\4.0.11\\system.threading.tasks.4.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

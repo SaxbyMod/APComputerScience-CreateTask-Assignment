@@ -13,3 +13,7 @@ C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplaye
 C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Displayer.pdb
 C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Displayer.genruntimeconfig.cache
 C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\ref\Book Displayer.dll
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\bin\Release\net8.0\System.Geometry.dll
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\bin\Release\net8.0\System.Geometry.Text.dll
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Displayer.csproj.AssemblyReference.cache
+C:\Users\Thinc\source\repos\APComputerScience-CreateTask-Assignment\BookDisplayer\obj\Release\net8.0\Book Dis.0BE172C8.Up2Date
