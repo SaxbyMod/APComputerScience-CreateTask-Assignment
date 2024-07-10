@@ -15,7 +15,7 @@
 2. Enter the title of the book you want to read as listed in the console.
 3. Read away, Note: `<` means go to the prior page `X` means close the page and `>` means go to the next page in the book.
 
-### Writing:
+### Writing;
 
 1. Open The `Books` Folder.
 2. Make a new folder with any name you want, Just cannot be the same as one already in the folder.
